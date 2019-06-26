@@ -1,0 +1,74 @@
+::-webkit-scrollbar { 
+   display: none; 
+}
+
+#input_holder{
+   margin-top: 110px;
+   margin-left: 80px;
+   float: left;
+}
+
+#img_border, #text_holder{
+   overflow-y: hidden;
+   border: 1px solid lightgray;
+   width: 500px;
+   height: 400px;
+}
+
+#text_holder{
+   margin-right: 80px;
+   float: right;
+   margin-top: 155px;
+   overflow-y: scroll;
+   width: 500px;
+   height: 400px;
+}
+
+#text_holder p{
+   margin: 10px;
+}
+
+#result{
+   width: 500px;
+   height: 400px;
+   border: 1px solid #fff1bf;
+   background: #fff1bf;
+}
+
+#logo{
+   position: absolute;
+   top: 15px;
+   left: 20px;
+}
+
+#btnSubmit{
+   padding: 2px;
+   font-size: 16px;
+}
+
+h2{
+   font-family: 'Courier New', Courier, monospace; 
+   position: absolute;
+   top: 25px;
+   right: 50px;
+}
+
+#arrow{
+   position: absolute;
+   top: 350px;
+   left: 50%;
+   width: 80px;
+   height: 50px;
+   margin-top: -25px; /* Half the height */
+   margin-left: -40px; /* Half the width */
+}
+
+#default{
+   position: relative;
+   top: 50%;
+   left: 50%;
+   width: 126px;
+   height: 100px;
+   margin-top: -50px; /* Half the height */
+   margin-left: -63px; /* Half the width */
+}
