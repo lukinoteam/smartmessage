@@ -37,7 +37,7 @@ def upload_file():
          os.popen("rm -r ./static/uploads/*")
          file.save(os.path.join(UPLOAD_FOLDER, filename))
          f = os.popen("sshpass -p '" + password + "' scp -P 25 " + os.path.join(app.config['UPLOAD_FOLDER'], filename) + ' root@45.32.39.232:~/Document_Reader/Upload')
-         time.sleep(3)
+         time.sleep(5)
          return redirect(url_for('read_file', filename=filename))
 
    return render_template('home.html', type = 'Upload')
@@ -45,7 +45,6 @@ def upload_file():
 @app.route('/uploaded/<filename>', methods = ['GET', 'POST'])
 def read_file(filename):
 
-   full_filename = os.path.join('/' + app.config['UPLOAD_FOLDER'], filename)
 
    # GET THE RESULT BY API
    if request.method == 'POST':
@@ -54,6 +53,7 @@ def read_file(filename):
       full_filename = os.path.join('/' + app.config['UPLOAD_FOLDER'], filename)
       return render_template("home.html", text_result = result, image = full_filename, type="Upload", link = url_for('upload_file'))
    
+   full_filename = os.path.join('/' + app.config['UPLOAD_FOLDER'], filename)
    return render_template("home.html", image = full_filename, type="Read", link = url_for('upload_file'))
 
 if __name__ == "__main__":
