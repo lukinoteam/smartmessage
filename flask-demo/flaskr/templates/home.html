@@ -1,8 +1,6 @@
 <html>
    <head>
       <title>Document Reader</title>
-      <script src="{{ url_for('static', filename='script/script.js') }}"></script>
-      <script src="{{ url_for('static', filename='script/bootstrap.min.js') }}"></script>
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">   
 
@@ -10,23 +8,22 @@
    <body>
       <img id="logo" src="{{ url_for('static', filename='logo/logo.png') }}" alt="">
       <h2>DOCUMENT READER</h2>
-      <img id="arrow" src="{{ url_for('static', filename='img/arrow.png') }}" alt="">
       <div id="input_holder">
          <form method = "POST" enctype="multipart/form-data">
-            <div class="row">
-               <input id="inputFile" class="form-control-file col-6" type = "file" name = "file" onchange='readURL(this)'/>
+            <input id="inputFile" class="form-control-file" type = "file" name = "file"/>
          
-               <select class="form-control-sm col-2" id="inputLang" name="lang">
-                  <option value="eng">ENG</option>
-                  <option value="jpn">JP</option>
-                  <option value="kor">KR</option>
-               </select>
+            <select class="form-control-sm" id="inputLang" name="lang">
+               <option value="eng">ENG</option>
+               <option value="jpn">JP</option>
+               <option value="kor">KR</option>
+            </select>
 
-               <div class="col-1"></div>
-
-               <input class="btn btn-primary col-2" id="btnSubmit" type = "submit" value="Read"/>
-            </div>
+            <input class="btn btn-primary" id="btnUpload" type = "submit" value="{{ type }}"/>
          </form>
+
+         <form action="{{ link }}">
+            <input id="btnTryAgain" class="btn btn-warning" type="submit" value="Try Again" />
+        </form>
          <div id="img_border">
             <img id="preview" onerror="this.style.display = 'none'" width="500px">
             <img id="official" src="{{ image }}" onerror="this.style.display = 'none'" width="500px" >

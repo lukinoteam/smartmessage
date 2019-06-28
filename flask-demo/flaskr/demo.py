@@ -27,7 +27,6 @@ def allowed_file(filename):
 def upload_file():
    if request.method == 'POST':
       file = request.files['file']
-      lang = request.form.get('lang')
       if file and allowed_file(file.filename):
 
          # SSH PASSWORD
@@ -39,15 +38,23 @@ def upload_file():
          file.save(os.path.join(UPLOAD_FOLDER, filename))
          f = os.popen("sshpass -p '" + password + "' scp -P 25 " + os.path.join(app.config['UPLOAD_FOLDER'], filename) + ' root@45.32.39.232:~/Document_Reader/Upload')
          time.sleep(3)
+         return redirect(url_for('read_file', filename=filename))
 
-         # GET THE RESULT BY API
-         result = test.detect("./Upload/" + filename + ":" + lang)
+   return render_template('home.html', type = 'Upload')
 
-         # SHOW THE RESULT
-         full_filename = os.path.join('/' + app.config['UPLOAD_FOLDER'], filename)
-         return render_template("home.html", text_result = result, image = full_filename)
+@app.route('/uploaded/<filename>', methods = ['GET', 'POST'])
+def read_file(filename):
 
-   return render_template('home.html')
+   full_filename = os.path.join('/' + app.config['UPLOAD_FOLDER'], filename)
+
+   # GET THE RESULT BY API
+   if request.method == 'POST':
+      lang = request.form.get('lang')
+      result = test.detect("./Upload/" + filename + ":" + lang)
+      full_filename = os.path.join('/' + app.config['UPLOAD_FOLDER'], filename)
+      return render_template("home.html", text_result = result, image = full_filename, type="Upload", link = url_for('upload_file'))
+   
+   return render_template("home.html", image = full_filename, type="Read", link = url_for('upload_file'))
 
 if __name__ == "__main__":
    app.run(host=HOST, port=PORT, debug=True)
