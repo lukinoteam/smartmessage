@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindFriendActivity">
+
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:hint="Search by username..."
+        android:inputType="text"
+        android:paddingStart="@dimen/_14sdp"
+        android:background="@drawable/solid_round_border"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_9sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        tools:ignore="RtlSymmetry" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvFindResult"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_below="@id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_345sdp">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

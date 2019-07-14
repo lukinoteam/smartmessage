@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "938836041366",
+    "firebase_url": "https://smart-message-64a51.firebaseio.com",
+    "project_id": "smart-message-64a51",
+    "storage_bucket": "smart-message-64a51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938836041366:android:e3d1cfa472afc723",
+        "android_client_info": {
+          "package_name": "com.example.scratchmessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938836041366-n26hutg3glq8k451chqadeio8t9bn884.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.scratchmessage",
+            "certificate_hash": "d1f9d2c65e7132da0c990c15ad1d95a5be0ffd7f"
+          }
+        },
+        {
+          "client_id": "938836041366-kqfr9fui8k0sa5cfcpjjrtjdvugisib5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClBHD69tfa20ohHANOFkIotG5cR8mEtRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938836041366-apvvtv1jn71jh9kkr43dmdid7rfotmvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/pnToolBar"
+        android:background="@color/colorBasicTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/pnImgHolder"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgAvatar"
+                android:src="@mipmap/ic_launcher"
+                android:background="@drawable/solid_round_border"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Smart Message"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnSetting"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_settings_white_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:hint="Search friends"
+        android:inputType="text"
+        android:padding="@dimen/_11sdp"
+        android:background="@drawable/solid_round_border"
+        android:layout_below="@id/pnToolBar"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_9sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvContact"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_below="@id/edtSearch"
+        android:layout_above="@+id/pnTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_345sdp">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/pnTab"
+        android:padding="@dimen/_5sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBasicTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btnAddFriend"
+            android:src="@drawable/ic_search_white_24dp"
+            android:background="@null"
+            android:layout_marginStart="@dimen/_69sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+
+        <ImageButton
+            android:id="@+id/btnFriendRequests"
+            android:src="@drawable/ic_friend_white_24dp"
+            android:background="@null"
+            android:layout_marginEnd="@dimen/_69sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp" />
+    </RelativeLayout>
+</RelativeLayout>

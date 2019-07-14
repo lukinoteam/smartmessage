@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvImgHolder"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:src="@mipmap/default_avatar"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="UserName"
+        android:layout_marginEnd="@dimen/_55sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@null"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/cvImgHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/btnAccept"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_70sdp"
+        android:src="@drawable/ic_check_blue_35sdp"
+        android:background="@null" />
+
+    <ImageButton
+        android:id="@+id/btnDecline"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_decline_blue_35sdp"
+        android:background="@null" />
+
+</RelativeLayout>

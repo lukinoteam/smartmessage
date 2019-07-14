@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactSetting">
+
+    <RelativeLayout
+        android:id="@+id/pnInfo"
+        android:background="@color/colorBasicTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp">
+
+        <LinearLayout
+            android:background="@color/colorAccent"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:text="Back"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/colorWhite"
+                android:background="@null"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:text="Save"
+                android:layout_weight="1"
+                android:textSize="@dimen/_13sdp"
+                android:padding="@dimen/_15sdp"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentEnd="true"
+                android:background="@null"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:text="UserName"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="@dimen/_110sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pnImgHolder"
+        app:cardCornerRadius="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_155sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:src="@mipmap/default_avatar"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp" />
+    </android.support.v7.widget.CardView>
+
+    <EditText
+        android:id="@+id/edtNickname"
+        android:paddingStart="@dimen/_15sdp"
+        android:hint="Nickname"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@drawable/solid_border_blue"
+        android:layout_below="@id/pnImgHolder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</RelativeLayout>
